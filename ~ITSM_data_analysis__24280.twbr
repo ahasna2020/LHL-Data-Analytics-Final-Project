@@ -1,0 +1,3040 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20233.23.1017.0948                               -->
+<workbook original-version='18.1' source-build='2023.3.0 (20233.23.1017.0948)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <SavingAnalyticObjects />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <_.fcp.MarkAnimation.true...style-rule element='animation'>
+      <format attr='animation-duration' value='0.5' />
+      <format attr='animation-style' value='as-phased' />
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.MarkAnimation.true...style-rule>
+  </style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Top N Services' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='5'>
+        <calculation class='tableau' formula='5' />
+        <range max='30' min='1' />
+      </column>
+    </datasource>
+    <datasource caption='IT_Tickets_All_time_cleaned' inline='true' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='IT_Tickets_All_time_cleaned' name='textscan.0oh3y4h032wgji16zrm7a0uznwic'>
+            <connection class='textscan' directory='C:/Users/aysha/Documents/My Tableau Repository/LHL-Data-Analytics-Final-Project/data' filename='IT_Tickets_All_time_cleaned.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0oh3y4h032wgji16zrm7a0uznwic' name='IT_Tickets_All_time_cleaned.csv' table='[IT_Tickets_All_time_cleaned#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='string' name='ID' ordinal='0' />
+            <column datatype='integer' name='Priority' ordinal='1' />
+            <column datatype='string' name='Customer Name' ordinal='2' />
+            <column datatype='string' name='Description' ordinal='3' />
+            <column datatype='string' name='Location' ordinal='4' />
+            <column datatype='string' name='Room #' ordinal='5' />
+            <column datatype='datetime' name='Created' ordinal='6' />
+            <column datatype='string' name='Owned By' ordinal='7' />
+            <column datatype='string' name='Type' ordinal='8' />
+            <column datatype='string' name='Owned By Team' ordinal='9' />
+            <column datatype='string' name='Status' ordinal='10' />
+            <column datatype='datetime' name='SLA Resolve By Deadline' ordinal='11' />
+            <column datatype='datetime' name='Closed Date Time' ordinal='12' />
+            <column datatype='string' name='Customer Type' ordinal='13' />
+            <column datatype='boolean' name='Closed on 1st Call' ordinal='14' />
+            <column datatype='datetime' name='stat_Date Time Resolved' ordinal='15' />
+            <column datatype='string' name='stat_Response Time' ordinal='16' />
+            <column datatype='boolean' name='stat_SLA Resolution Breached' ordinal='17' />
+            <column datatype='string' name='Category' ordinal='18' />
+            <column datatype='string' name='Subcategory' ordinal='19' />
+            <column datatype='string' name='Service' ordinal='20' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0oh3y4h032wgji16zrm7a0uznwic' name='IT_Tickets_All_time_cleaned.csv' table='[IT_Tickets_All_time_cleaned#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='string' name='ID' ordinal='0' />
+            <column datatype='integer' name='Priority' ordinal='1' />
+            <column datatype='string' name='Customer Name' ordinal='2' />
+            <column datatype='string' name='Description' ordinal='3' />
+            <column datatype='string' name='Location' ordinal='4' />
+            <column datatype='string' name='Room #' ordinal='5' />
+            <column datatype='datetime' name='Created' ordinal='6' />
+            <column datatype='string' name='Owned By' ordinal='7' />
+            <column datatype='string' name='Type' ordinal='8' />
+            <column datatype='string' name='Owned By Team' ordinal='9' />
+            <column datatype='string' name='Status' ordinal='10' />
+            <column datatype='datetime' name='SLA Resolve By Deadline' ordinal='11' />
+            <column datatype='datetime' name='Closed Date Time' ordinal='12' />
+            <column datatype='string' name='Customer Type' ordinal='13' />
+            <column datatype='boolean' name='Closed on 1st Call' ordinal='14' />
+            <column datatype='datetime' name='stat_Date Time Resolved' ordinal='15' />
+            <column datatype='string' name='stat_Response Time' ordinal='16' />
+            <column datatype='boolean' name='stat_SLA Resolution Breached' ordinal='17' />
+            <column datatype='string' name='Category' ordinal='18' />
+            <column datatype='string' name='Subcategory' ordinal='19' />
+            <column datatype='string' name='Service' ordinal='20' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Priority</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Priority]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Priority</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Customer Name]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Customer Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Description]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Description</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Location]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Location</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Room #</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Room #]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Room #</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Created</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Created]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Created</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Owned By</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Owned By]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Owned By</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Type]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Type</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Owned By Team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Owned By Team]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Owned By Team</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Status]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Status</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SLA Resolve By Deadline</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[SLA Resolve By Deadline]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>SLA Resolve By Deadline</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Closed Date Time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Closed Date Time]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Closed Date Time</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Customer Type]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Customer Type</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Closed on 1st Call</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Closed on 1st Call]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Closed on 1st Call</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stat_Date Time Resolved</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[stat_Date Time Resolved]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>stat_Date Time Resolved</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stat_Response Time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[stat_Response Time]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>stat_Response Time</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stat_SLA Resolution Breached</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[stat_SLA Resolution Breached]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>stat_SLA Resolution Breached</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Subcategory</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Subcategory]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Subcategory</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Service</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Service]</local-name>
+            <parent-name>[IT_Tickets_All_time_cleaned.csv]</parent-name>
+            <remote-alias>Service</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Count_Tickets_Classify' datatype='string' name='[Calculation_1708553156686397440]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='if count([__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A])&gt;500 then &quot;Bad&quot;&#13;&#10;else &quot;OK&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Days to resolve' datatype='integer' name='[Calculation_1708553157608325122]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;week&apos;,[Created],[stat_Date Time Resolved])*5&#13;&#10;&#13;&#10;+&#13;&#10;&#13;&#10;MIN(DATEPART(&apos;weekday&apos;,[stat_Date Time Resolved]),6)&#13;&#10;&#13;&#10;-&#13;&#10;&#13;&#10;MIN(DATEPART(&apos;weekday&apos;,[Created]),6)' />
+      </column>
+      <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+      <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Customer Type]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Owned By Team]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Service]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Status]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Subcategory]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='IT_Tickets_All_time_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+      <column caption='Date Time Resolved' datatype='datetime' name='[stat_Date Time Resolved]' role='dimension' type='ordinal' />
+      <column caption='Response Time' datatype='string' name='[stat_Response Time]' role='dimension' type='nominal' />
+      <column caption='SLA Resolution Breached' datatype='boolean' name='[stat_SLA Resolution Breached]' role='dimension' type='nominal' />
+      <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1708553157608325122]' derivation='Avg' name='[avg:Calculation_1708553157608325122:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Customer Type]' derivation='None' name='[none:Customer Type:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Service]' derivation='None' name='[none:Service:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Status]' derivation='None' name='[none:Status:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Created]' derivation='Quarter-Trunc' name='[tqr:Created:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Calculation_1708553156686397440]' derivation='User' name='[usr:Calculation_1708553156686397440:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Category,YEAR(Created),Service,Subcategory)' hidden='true' name='[Action (Category,YEAR(Created),Service,Subcategory)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Category]' />
+          <groupfilter function='level-members' level='[yr:Created:ok]' />
+          <groupfilter function='level-members' level='[Service]' />
+          <groupfilter function='level-members' level='[Subcategory]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Owned By Team,Status)' hidden='true' name='[Action (Owned By Team,Status)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Owned By Team]' />
+          <groupfilter function='level-members' level='[Status]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (QUARTER(Created),Service)' hidden='true' name='[Action (QUARTER(Created),Service)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[tqr:Created:ok]' />
+          <groupfilter function='level-members' level='[Service]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Service)' hidden='true' name='[Action (Service)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Service]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (YEAR(Created))' hidden='true' name='[Action (YEAR(Created))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[yr:Created:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (YEAR(Created),Customer Type,Service)' hidden='true' name='[Action (YEAR(Created),Customer Type,Service)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[yr:Created:ok]' />
+          <groupfilter function='level-members' level='[Customer Type]' />
+          <groupfilter function='level-members' level='[Service]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='100' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Customer Type:nk]' palette='orange_gold_10_0' type='palette'>
+            <map to='#9e3a26'>
+              <bucket>&quot;Unknown&quot;</bucket>
+            </map>
+            <map to='#b34223'>
+              <bucket>&quot;Student&quot;</bucket>
+            </map>
+            <map to='#c84b22'>
+              <bucket>&quot;Staff&quot;</bucket>
+            </map>
+            <map to='#da5821'>
+              <bucket>&quot;SNB Staff&quot;</bucket>
+            </map>
+            <map to='#e7681d'>
+              <bucket>&quot;Guest&quot;</bucket>
+            </map>
+            <map to='#f17b23'>
+              <bucket>&quot;Faculty&quot;</bucket>
+            </map>
+            <map to='#f49135'>
+              <bucket>&quot;Contractor&quot;</bucket>
+            </map>
+            <map to='#f4d166'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#f7a648'>
+              <bucket>&quot;Continuing Ed Online&quot;</bucket>
+            </map>
+            <map to='#f8bb5a'>
+              <bucket>&quot;Consultant&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Service:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Account Management&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Network Services&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Enterprise Apps-LMS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Computer - Hardware&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Enterprise Apps-SIMS&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Computer - Software&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[yr:Created:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>2015</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>2019</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>2018</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>2023</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>2021</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>2017</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>2020</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2016</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>2022</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:Calculation_1708553156686397440:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;OK&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Bad&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Status:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Assigned&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Pending&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;New&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Resolved&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;In Progress&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Reopened&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Closed&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <filter class='categorical' column='[yr:Created:ok]' filter-group='2'>
+        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[yr:Created:ok]' member='2019' />
+          <groupfilter function='member' level='[yr:Created:ok]' member='2020' />
+          <groupfilter function='member' level='[yr:Created:ok]' member='2021' />
+          <groupfilter function='member' level='[yr:Created:ok]' member='2022' />
+          <groupfilter function='member' level='[yr:Created:ok]' member='2023' />
+        </groupfilter>
+      </filter>
+      <analytic-model>
+        <name>
+          <field name='[AnalyticModel:{e864f02e-3c5b-4848-a7ad-8f5b463859d8}]' />
+        </name>
+        <analytic-model-specifications class='cluster-specifications'>
+          <analysis-fields>
+            <field name='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+            <field name='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]' />
+          </analysis-fields>
+          <filter-fields />
+          <lod-fields />
+          <number-of-desired-clusters>0</number-of-desired-clusters>
+          <is-dissagregate>false</is-dissagregate>
+        </analytic-model-specifications>
+        <result-fields />
+      </analytic-model>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='IT_Tickets_All_time_cleaned.csv' id='IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A'>
+            <properties context=''>
+              <relation connection='textscan.0oh3y4h032wgji16zrm7a0uznwic' name='IT_Tickets_All_time_cleaned.csv' table='[IT_Tickets_All_time_cleaned#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                  <column datatype='string' name='ID' ordinal='0' />
+                  <column datatype='integer' name='Priority' ordinal='1' />
+                  <column datatype='string' name='Customer Name' ordinal='2' />
+                  <column datatype='string' name='Description' ordinal='3' />
+                  <column datatype='string' name='Location' ordinal='4' />
+                  <column datatype='string' name='Room #' ordinal='5' />
+                  <column datatype='datetime' name='Created' ordinal='6' />
+                  <column datatype='string' name='Owned By' ordinal='7' />
+                  <column datatype='string' name='Type' ordinal='8' />
+                  <column datatype='string' name='Owned By Team' ordinal='9' />
+                  <column datatype='string' name='Status' ordinal='10' />
+                  <column datatype='datetime' name='SLA Resolve By Deadline' ordinal='11' />
+                  <column datatype='datetime' name='Closed Date Time' ordinal='12' />
+                  <column datatype='string' name='Customer Type' ordinal='13' />
+                  <column datatype='boolean' name='Closed on 1st Call' ordinal='14' />
+                  <column datatype='datetime' name='stat_Date Time Resolved' ordinal='15' />
+                  <column datatype='string' name='stat_Response Time' ordinal='16' />
+                  <column datatype='boolean' name='stat_SLA Resolution Breached' ordinal='17' />
+                  <column datatype='string' name='Category' ordinal='18' />
+                  <column datatype='string' name='Subcategory' ordinal='19' />
+                  <column datatype='string' name='Service' ordinal='20' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 10 (generated)' name='[Action10_7D1B0832130241259F6BF88F640BE0AE]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 5' type='sheet' worksheet='Days to resolve by Service' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 5' />
+      </command>
+    </action>
+    <action caption='Filter 11 (generated)' name='[Action11_D92DFDA97C5B45609300EE277BC4CD61]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 5' type='sheet' worksheet='Days to resolve by Team' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 5' />
+      </command>
+    </action>
+    <action caption='Filter 12 (generated)' name='[Action12_40DBF37E969E4878ADD92941976A9EBE]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 5' type='sheet' worksheet='Ticket count by customer type' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 5' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated)' name='[Action1_2E2EA8B6B689487687C95EC2A93AD421]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Tickets Overview' type='sheet' worksheet='Tickets by year' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Tickets Overview' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_84914F4A517447168208ADC34BADA090]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Tickets Overview' type='sheet' worksheet='Incidents vs Requests' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Tickets Overview' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3_ECA39AF5AD394E20B2D71E45E4608466]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Service Level Overview' type='sheet' worksheet='Top N Services by Quarter' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Service Level Overview' />
+      </command>
+    </action>
+    <action caption='Filter 4 (generated)' name='[Action4_885BADD926EE4AED806F9ADD961319D5]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Service Level Overview' type='sheet' worksheet='Service level view by year' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Service Level Overview' />
+      </command>
+    </action>
+    <action caption='Filter 5 (generated)' name='[Action5_BD460D85655A4A32B6C5C5D83666DF70]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Service dissection by subcategory' type='sheet' worksheet='Service level view by year' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Service dissection by subcategory' />
+      </command>
+    </action>
+    <action caption='Filter 6 (generated)' name='[Action6_D7C414A05500478286F52219B8B208D7]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Service dissection by subcategory' type='sheet' worksheet='Comparative study of areas with most tickets' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Service dissection by subcategory' />
+      </command>
+    </action>
+    <action caption='Filter 8 (generated)' name='[Action8_7FD47E98AB09412BA57DB884D2C1D9FB]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Tickets by Team and User Type' type='sheet' worksheet='Incidents vs Requests' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Tickets by Team and User Type' />
+      </command>
+    </action>
+    <action caption='Filter 7 (generated)' name='[Action8_AFCE7E07942847E388E88DB3B388276F]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Tickets by Team and User Type' type='sheet' worksheet='Ticket status by Team' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Tickets by Team and User Type' />
+      </command>
+    </action>
+    <action caption='Filter 9 (generated)' name='[Action9_C941769B5CF54AF9A5465B3701279F47]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Tickets by Team and User Type' type='sheet' worksheet='Ticket count by customer type' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Tickets by Team and User Type' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Account management Tickets - Peak Season'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+            <_.fcp.ObjectModelTableType.false...column caption='IT_Tickets_All_time_cleaned.csv' datatype='integer' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Service]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='IT_Tickets_All_time_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Created]' derivation='None' name='[none:Created:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Service]' derivation='None' name='[none:Service:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Created]' derivation='Hour-Trunc' name='[thr:Created:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Category:nk]' />
+              <groupfilter function='member' level='[none:Category:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Created:qk]' included-values='in-range'>
+            <min>#2023-01-02 00:00:00#</min>
+            <max>#2023-01-13 13:02:00#</max>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]'>
+            <groupfilter function='member' level='[none:Service:nk]' member='&quot;Account Management&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Created:qk]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' scope='rows' value='Ticket count' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Hour of Created:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[thr:Created:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Ticket count:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]</rows>
+        <cols>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[thr:Created:qk]</cols>
+      </table>
+      <simple-id uuid='{675C06E8-2C72-46FD-ABF7-863477E18E4C}' />
+    </worksheet>
+    <worksheet name='Clustering'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+            <column auto-hidden='true' caption='Clusters' datatype='integer' hidden='true' is-adhoc-cluster='true' name='[AdhocCluster:1]' parent-model='[AnalyticModel:{e864f02e-3c5b-4848-a7ad-8f5b463859d8}]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='-1' value='Cluster Outliers' />
+                <alias key='0' value='Not Clustered' />
+                <alias key='1' value='Cluster 1' />
+                <alias key='2' value='Cluster 2' />
+                <alias key='3' value='Cluster 3' />
+                <alias key='4' value='Cluster 4' />
+                <alias key='5' value='Cluster 5' />
+                <alias key='6' value='Cluster 6' />
+                <alias key='7' value='Cluster 7' />
+                <alias key='8' value='Cluster 8' />
+                <alias key='9' value='Cluster 9' />
+                <alias key='10' value='Cluster 10' />
+                <alias key='11' value='Cluster 11' />
+                <alias key='12' value='Cluster 12' />
+                <alias key='13' value='Cluster 13' />
+                <alias key='14' value='Cluster 14' />
+                <alias key='15' value='Cluster 15' />
+                <alias key='16' value='Cluster 16' />
+                <alias key='17' value='Cluster 17' />
+                <alias key='18' value='Cluster 18' />
+                <alias key='19' value='Cluster 19' />
+                <alias key='20' value='Cluster 20' />
+                <alias key='21' value='Cluster 21' />
+                <alias key='22' value='Cluster 22' />
+                <alias key='23' value='Cluster 23' />
+                <alias key='24' value='Cluster 24' />
+                <alias key='25' value='Cluster 25' />
+                <alias key='26' value='Cluster 26' />
+                <alias key='27' value='Cluster 27' />
+                <alias key='28' value='Cluster 28' />
+                <alias key='29' value='Cluster 29' />
+                <alias key='30' value='Cluster 30' />
+                <alias key='31' value='Cluster 31' />
+                <alias key='32' value='Cluster 32' />
+                <alias key='33' value='Cluster 33' />
+                <alias key='34' value='Cluster 34' />
+                <alias key='35' value='Cluster 35' />
+                <alias key='36' value='Cluster 36' />
+                <alias key='37' value='Cluster 37' />
+                <alias key='38' value='Cluster 38' />
+                <alias key='39' value='Cluster 39' />
+                <alias key='40' value='Cluster 40' />
+                <alias key='41' value='Cluster 41' />
+                <alias key='42' value='Cluster 42' />
+                <alias key='43' value='Cluster 43' />
+                <alias key='44' value='Cluster 44' />
+                <alias key='45' value='Cluster 45' />
+                <alias key='46' value='Cluster 46' />
+                <alias key='47' value='Cluster 47' />
+                <alias key='48' value='Cluster 48' />
+                <alias key='49' value='Cluster 49' />
+                <alias key='50' value='Cluster 50' />
+              </aliases>
+            </column>
+            <column caption='Days to resolve' datatype='integer' name='[Calculation_1708553157608325122]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;week&apos;,[Created],[stat_Date Time Resolved])*5&#13;&#10;&#13;&#10;+&#13;&#10;&#13;&#10;MIN(DATEPART(&apos;weekday&apos;,[stat_Date Time Resolved]),6)&#13;&#10;&#13;&#10;-&#13;&#10;&#13;&#10;MIN(DATEPART(&apos;weekday&apos;,[Created]),6)' />
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='IT_Tickets_All_time_cleaned.csv' datatype='integer' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+            <_.fcp.ObjectModelTableType.true...column caption='IT_Tickets_All_time_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1708553157608325122]' derivation='Avg' name='[avg:Calculation_1708553157608325122:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[AdhocCluster:1]' derivation='None' is-adhoc-cluster='true' name='[none:AdhocCluster:1:ok]' pivot='key' type='ordinal' />
+            <column caption='Date Time Resolved' datatype='datetime' name='[stat_Date Time Resolved]' role='dimension' type='ordinal' />
+            <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[stat_Date Time Resolved]' derivation='Year' name='[yr:stat_Date Time Resolved:ok]' pivot='key' type='ordinal' />
+            <style />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]'>
+            <groupfilter function='member' level='[yr:Created:ok]' member='2023' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:AdhocCluster:1:ok]' />
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:stat_Date Time Resolved:ok]' />
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' />
+              <color column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E682F397-F35A-4967-BA9C-280113109B1B}' />
+    </worksheet>
+    <worksheet name='Comparative study of areas with most tickets'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+            <column caption='Count_Tickets_Classify' datatype='string' name='[Calculation_1708553156686397440]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='if count([__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A])&gt;500 then &quot;Bad&quot;&#13;&#10;else &quot;OK&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Customer Type]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Service]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='IT_Tickets_All_time_cleaned.csv' datatype='integer' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Subcategory]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='IT_Tickets_All_time_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Service]' derivation='None' name='[none:Service:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Subcategory]' derivation='None' name='[none:Subcategory:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1708553156686397440]' derivation='User' name='[usr:Calculation_1708553156686397440:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (YEAR(Created),Customer Type,Service)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action5_BD460D85655A4A32B6C5C5D83666DF70]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:Created:ok]' />
+              <groupfilter function='level-members' level='[Customer Type]' />
+              <groupfilter function='level-members' level='[Service]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Category:nk]' />
+              <groupfilter function='member' level='[none:Category:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]'>
+            <groupfilter function='level-members' level='[none:Service:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <manual-sort column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Subcategory:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Student Account&quot;</bucket>
+              <bucket>&quot;Other/I Don&apos;t Know&quot;</bucket>
+              <bucket>&quot;New Employee Setup&quot;</bucket>
+              <bucket>&quot;Multi Factor Auth Incident&quot;</bucket>
+              <bucket>&quot;Term Extension&quot;</bucket>
+              <bucket>&quot;Misc. account create/update&quot;</bucket>
+              <bucket>&quot;Add/Remove Access/Permissions&quot;</bucket>
+              <bucket>&quot;Update/Change&quot;</bucket>
+              <bucket>&quot;Employee Exit&quot;</bucket>
+              <bucket>&quot;Update Employee Information&quot;</bucket>
+              <bucket>&quot;Access outside US or Can&quot;</bucket>
+              <bucket>&quot;Request Access&quot;</bucket>
+              <bucket>&quot;Change Password&quot;</bucket>
+              <bucket>&quot;Request New&quot;</bucket>
+              <bucket>&quot;Request Mailbox or Alias&quot;</bucket>
+              <bucket>&quot;Account Creation&quot;</bucket>
+              <bucket>&quot;Submit Incident&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]'>
+            <groupfilter function='level-members' level='[yr:Created:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (YEAR(Created),Customer Type,Service)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='135' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[usr:Calculation_1708553156686397440:nk]' />
+              <size column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Category:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Service:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Subcategory:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Subcategory:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Year of Created:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Ticket count:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Count_Tickets_Classify:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[usr:Calculation_1708553156686397440:nk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok] / ([federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk] / ([federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk] / [federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Subcategory:nk])))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{CB5429BF-DAE0-435B-80D4-2196B1DF9504}' />
+    </worksheet>
+    <worksheet name='Days to resolve by Service'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+            <column caption='Days to resolve' datatype='integer' name='[Calculation_1708553157608325122]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;week&apos;,[Created],[stat_Date Time Resolved])*5&#13;&#10;&#13;&#10;+&#13;&#10;&#13;&#10;MIN(DATEPART(&apos;weekday&apos;,[stat_Date Time Resolved]),6)&#13;&#10;&#13;&#10;-&#13;&#10;&#13;&#10;MIN(DATEPART(&apos;weekday&apos;,[Created]),6)' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Service]' role='dimension' type='nominal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Service]' derivation='None' name='[none:Service:nk]' pivot='key' type='nominal' />
+            <column caption='Date Time Resolved' datatype='datetime' name='[stat_Date Time Resolved]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1708553157608325122]' derivation='Sum' name='[sum:Calculation_1708553157608325122:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Category:nk]' />
+              <groupfilter function='member' level='[none:Category:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[sum:Calculation_1708553157608325122:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[sum:Calculation_1708553157608325122:qk]' />
+              <color column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[sum:Calculation_1708553157608325122:qk]' />
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{9F8F8111-117A-4631-A922-1B9763AE1EE5}' />
+    </worksheet>
+    <worksheet lock-quick-filters='true' name='Days to resolve by Team'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+            <column caption='Days to resolve' datatype='integer' name='[Calculation_1708553157608325122]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;week&apos;,[Created],[stat_Date Time Resolved])*5&#13;&#10;&#13;&#10;+&#13;&#10;&#13;&#10;MIN(DATEPART(&apos;weekday&apos;,[stat_Date Time Resolved]),6)&#13;&#10;&#13;&#10;-&#13;&#10;&#13;&#10;MIN(DATEPART(&apos;weekday&apos;,[Created]),6)' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Owned By Team]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Service]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1708553157608325122]' derivation='Avg' name='[avg:Calculation_1708553157608325122:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Owned By Team]' derivation='None' name='[none:Owned By Team:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Service]' derivation='None' name='[none:Service:nk]' pivot='key' type='nominal' />
+            <column caption='Date Time Resolved' datatype='datetime' name='[stat_Date Time Resolved]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (Service)]'>
+            <groupfilter function='level-members' level='[Service]' user:ui-action-filter='[Action10_7D1B0832130241259F6BF88F640BE0AE]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]' included-values='non-null' />
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Category:nk]' />
+              <groupfilter function='member' level='[none:Category:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Owned By Team:nk]'>
+            <groupfilter function='level-members' level='[none:Owned By Team:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Owned By Team:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Owned By Team:nk]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (Service)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]' />
+              <lod column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-pane' value-column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]' z-order='1' />
+          </pane>
+        </panes>
+        <rows>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Owned By Team:nk]</rows>
+        <cols>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]</cols>
+      </table>
+      <simple-id uuid='{BDCA3630-8105-4553-9846-BCCA6185A01C}' />
+    </worksheet>
+    <worksheet name='Incidents vs Requests'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Owned By Team]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Status]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='IT_Tickets_All_time_cleaned.csv' datatype='integer' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='IT_Tickets_All_time_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Created]' derivation='Year-Trunc' name='[tyr:Created:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (Owned By Team,Status)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action8_AFCE7E07942847E388E88DB3B388276F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[Owned By Team]' member='&quot;Learning Management System&quot;' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[Status]' member='&quot;Assigned&quot;' />
+                <groupfilter function='member' level='[Status]' member='&quot;Closed&quot;' />
+                <groupfilter function='member' level='[Status]' member='&quot;Resolved&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (YEAR(Created))]'>
+            <groupfilter function='level-members' level='[yr:Created:ok]' user:ui-action-filter='[Action1_2E2EA8B6B689487687C95EC2A93AD421]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Category:nk]' />
+              <groupfilter function='member' level='[none:Category:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (YEAR(Created))]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (Owned By Team,Status)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' scope='rows' value='Ticket count' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Type:nk]' />
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]</rows>
+        <cols>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[tyr:Created:qk]</cols>
+      </table>
+      <simple-id uuid='{937D376F-4F34-4624-8EC6-A6DA14192AC2}' />
+    </worksheet>
+    <worksheet name='SLA Breach Trends'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='IT_Tickets_All_time_cleaned.csv' datatype='integer' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+            <_.fcp.ObjectModelTableType.true...column caption='IT_Tickets_All_time_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[stat_SLA Resolution Breached]' derivation='None' name='[none:stat_SLA Resolution Breached:nk]' pivot='key' type='nominal' />
+            <column caption='SLA Resolution Breached' datatype='boolean' name='[stat_SLA Resolution Breached]' role='dimension' type='nominal' />
+            <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Category:nk]' />
+              <groupfilter function='member' level='[none:Category:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[yr:Created:ok]' member='2021' />
+              <groupfilter function='member' level='[yr:Created:ok]' member='2022' />
+              <groupfilter function='member' level='[yr:Created:ok]' member='2023' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' value='79' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:stat_SLA Resolution Breached:nk]' value='160' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:stat_SLA Resolution Breached:nk]</rows>
+        <cols>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]</cols>
+      </table>
+      <simple-id uuid='{4B1581FB-745A-4E0E-BEFD-63BAB07A9FBC}' />
+    </worksheet>
+    <worksheet name='Service level view by year'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Customer Type]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='IT_Tickets_All_time_cleaned.csv' datatype='integer' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Service]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='IT_Tickets_All_time_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Customer Type]' derivation='None' name='[none:Customer Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Service]' derivation='None' name='[none:Service:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Created]' derivation='Quarter-Trunc' name='[tqr:Created:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (QUARTER(Created),Service)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_ECA39AF5AD394E20B2D71E45E4608466]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[tqr:Created:ok]' />
+              <groupfilter function='level-members' level='[Service]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]'>
+            <groupfilter function='level-members' level='[none:Category:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]'>
+            <groupfilter function='level-members' level='[none:Service:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]'>
+            <groupfilter function='level-members' level='[yr:Created:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' direction='DESC' measure-to-sort-by='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (QUARTER(Created),Service)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' scope='cols' value='Ticket count' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' data-class='subtotal' scope='cols' value='#ffffff' />
+            <format attr='color' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' value='#e6e6e6' />
+            <format attr='border-style' scope='cols' value='solid' />
+            <format attr='border-width' scope='cols' value='1' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='color' data-class='subtotal' scope='cols' value='#c0c0c0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Customer Type:nk]' />
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Customer Type:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Customer Type:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Service:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Year of Created:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Ticket count:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk] / [federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok])</rows>
+        <cols>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]</cols>
+      </table>
+      <simple-id uuid='{623B89E9-957B-4C5E-AA70-77CD212D13FA}' />
+    </worksheet>
+    <worksheet name='Ticket count by customer type'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Customer Type]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Owned By Team]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='IT_Tickets_All_time_cleaned.csv' datatype='integer' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Status]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='IT_Tickets_All_time_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Customer Type]' derivation='None' name='[none:Customer Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Created]' derivation='Year-Trunc' name='[tyr:Created:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (Owned By Team,Status)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action8_AFCE7E07942847E388E88DB3B388276F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[Owned By Team]' member='&quot;Learning Management System&quot;' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[Status]' member='&quot;Assigned&quot;' />
+                <groupfilter function='member' level='[Status]' member='&quot;Closed&quot;' />
+                <groupfilter function='member' level='[Status]' member='&quot;Resolved&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Category:nk]' />
+              <groupfilter function='member' level='[none:Category:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]'>
+            <groupfilter function='member' level='[yr:Created:ok]' member='2019' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (Owned By Team,Status)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' palette='red_green_diverging_10_0' type='interpolated' />
+            <encoding attr='size-bar' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+              <color column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Customer Type:nk]' />
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[tyr:Created:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A4066342-5220-40C7-A80D-69152A02B762}' />
+    </worksheet>
+    <worksheet name='Ticket count by location'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Location]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Owned By Team]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='IT_Tickets_All_time_cleaned.csv' datatype='integer' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Status]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='IT_Tickets_All_time_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Location]' derivation='None' name='[none:Location:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Created]' derivation='Quarter' name='[qr:Created:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (Owned By Team,Status)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action7_22B84A786AFA483ABD60AF267A6489A8]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[Owned By Team]' member='&quot;Tier 1&quot;' />
+              <groupfilter function='member' level='[Status]' member='&quot;Closed&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Category:nk]' />
+              <groupfilter function='member' level='[none:Category:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[yr:Created:ok]' member='2022' />
+              <groupfilter function='member' level='[yr:Created:ok]' member='2023' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[Action (Owned By Team,Status)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Location:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Location:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Quarter of Created:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[qr:Created:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Year of Created:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Ticket count:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows total='true'>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Location:nk]</rows>
+        <cols>([federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok] / [federated.1t0khq30evm85c1ddiqqp12ylmr6].[qr:Created:ok])</cols>
+      </table>
+      <simple-id uuid='{86A8B332-D977-467D-9C42-0C6E7F05F1DD}' />
+    </worksheet>
+    <worksheet name='Ticket status by Team'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run><![CDATA[Ticket Status by Team for year <]]></run>
+            <run>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]</run>
+            <run>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Owned By Team]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='IT_Tickets_All_time_cleaned.csv' datatype='integer' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Status]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='IT_Tickets_All_time_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' name='[__tableau_internal_object_id__].[pcto:cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Owned By Team]' derivation='None' name='[none:Owned By Team:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Status]' derivation='None' name='[none:Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Category:nk]' />
+              <groupfilter function='member' level='[none:Category:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]'>
+            <groupfilter function='level-members' level='[yr:Created:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Owned By Team:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[pcto:cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' scope='cols' value='% of Total Ticket count' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Status:nk]' />
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[pcto:cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Owned By Team:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Owned By Team:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Status:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Status:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Ticket count:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[pcto:cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Owned By Team:nk]</rows>
+        <cols>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[pcto:cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]</cols>
+      </table>
+      <simple-id uuid='{2C0BFA5C-C840-4EA9-9EAD-EAA0ED5524B1}' />
+    </worksheet>
+    <worksheet name='Tickets by year'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='IT_Tickets_All_time_cleaned.csv' datatype='integer' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+            <_.fcp.ObjectModelTableType.true...column caption='IT_Tickets_All_time_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' forecast-column-base='[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' forecast-column-type='forecast-value' name='[__tableau_internal_object_id__].[fVal:cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Category:nk]' />
+              <groupfilter function='member' level='[none:Category:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[fVal:cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' />
+              <color column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Forecast Indicator:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Year of Created:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Ticket count:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[fVal:cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]</rows>
+        <cols>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-type='auto' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{E7F6200B-71BE-4AD7-AE9B-F9C020D8400C}' />
+    </worksheet>
+    <worksheet name='Top N Services by Quarter'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Top N Services' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='5'>
+              <calculation class='tableau' formula='5' />
+              <range max='30' min='1' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+            <_.fcp.ObjectModelTableType.false...column caption='IT_Tickets_All_time_cleaned.csv' datatype='integer' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Service]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='IT_Tickets_All_time_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Service]' derivation='None' name='[none:Service:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Created]' derivation='Quarter-Trunc' name='[tqr:Created:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Category:nk]' />
+              <groupfilter function='member' level='[none:Category:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]'>
+            <groupfilter count='[Parameters].[Parameter 1]' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([__tableau_internal_object_id__].[IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Service:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[yr:Created:ok]' member='2020' />
+              <groupfilter function='member' level='[yr:Created:ok]' member='2021' />
+              <groupfilter function='member' level='[yr:Created:ok]' member='2022' />
+              <groupfilter function='member' level='[yr:Created:ok]' member='2023' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]</column>
+            <column>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' scope='rows' value='Ticket count' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Service:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Quarter of Created:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[tqr:Created:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Ticket count:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]</rows>
+        <cols>[federated.1t0khq30evm85c1ddiqqp12ylmr6].[tqr:Created:qk]</cols>
+      </table>
+      <simple-id uuid='{C11FE180-17E2-4C58-92A9-B6532224DAF5}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 5'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+        <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+        <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='13' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='11' type-v2='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='16' name='Days to resolve by Team' w='82400' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='20' name='Days to resolve by Service' w='41200' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='22' name='Ticket count by customer type' w='41200' x='42000' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='12' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='8125' id='19' name='Days to resolve by Team' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]' type-v2='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8125' id='21' name='Days to resolve by Service' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[sum:Calculation_1708553157608325122:qk]' type-v2='color' w='16000' x='83200' y='9125'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='18250' id='23' name='Ticket count by customer type' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type-v2='filter' w='16000' x='83200' y='17250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8125' id='24' name='Ticket count by customer type' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' type-v2='color' w='16000' x='83200' y='35500'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='8' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='7' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{78962BE9-CDD3-49D1-B955-A9470B4F72DD}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Service Level Overview'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Top N Services' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='5'>
+          <calculation class='tableau' formula='5' />
+          <range max='30' min='1' />
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+        <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+        <column datatype='string' name='[Service]' role='dimension' type='nominal' />
+        <column-instance column='[Service]' derivation='None' name='[none:Service:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type-v2='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='3' name='Top N Services by Quarter' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='11' name='Service level view by year' w='82400' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='16000' id='8' mode='checkdropdown' name='Top N Services by Quarter' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type-v2='filter' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='15750' id='9' name='Top N Services by Quarter' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type-v2='color' w='16000' x='83200' y='17000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6500' id='10' mode='type_in' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='16000' x='83200' y='32750'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='18250' id='12' name='Service level view by year' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type-v2='filter' w='16000' x='83200' y='39250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6500' id='13' mode='checkdropdown' name='Service level view by year' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type-v2='filter' w='16000' x='83200' y='57500'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='28250' id='14' name='Service level view by year' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Customer Type:nk]' type-v2='color' w='16000' x='83200' y='64000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='58' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='57' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone h='16000' id='8' mode='checkdropdown' name='Top N Services by Quarter' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type-v2='filter' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='3' is-fixed='true' name='Top N Services by Quarter' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='15750' id='9' name='Top N Services by Quarter' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type-v2='color' w='16000' x='83200' y='17000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='10' mode='type_in' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='16000' x='83200' y='32750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='18250' id='12' mode='checkdropdown' name='Service level view by year' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type-v2='filter' w='16000' x='83200' y='39250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='13' mode='checkdropdown' name='Service level view by year' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type-v2='filter' w='16000' x='83200' y='57500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='11' is-fixed='true' name='Service level view by year' w='82400' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='28250' id='14' name='Service level view by year' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Customer Type:nk]' type-v2='color' w='16000' x='83200' y='64000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{FA0E3C10-6FC0-4EB4-B4AB-532CF6A68574}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Service dissection by subcategory'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+        <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+        <column datatype='string' name='[Service]' role='dimension' type='nominal' />
+        <column-instance column='[Service]' derivation='None' name='[none:Service:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='31' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='5250' id='32' type-v2='title' w='98400' x='800' y='1000'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='92750' id='9' param='horz' type-v2='layout-flow' w='98400' x='800' y='6250'>
+              <zone h='92750' id='7' type-v2='layout-basic' w='82400' x='800' y='6250'>
+                <zone h='46375' id='5' name='Service level view by year' show-title='false' w='82400' x='800' y='6250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='46375' id='13' name='Comparative study of areas with most tickets' show-title='false' w='82400' x='800' y='52625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone fixed-size='160' h='92750' id='8' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='6250'>
+                <zone h='18250' id='10' name='Service level view by year' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type-v2='filter' w='16000' x='83200' y='6250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='11' mode='checkdropdown' name='Service level view by year' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type-v2='filter' w='16000' x='83200' y='24500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='28250' id='12' name='Service level view by year' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Customer Type:nk]' type-v2='color' w='16000' x='83200' y='31000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='14' mode='checkdropdown' name='Comparative study of areas with most tickets' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type-v2='filter' w='16000' x='83200' y='59250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='18250' id='15' name='Comparative study of areas with most tickets' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type-v2='filter' w='16000' x='83200' y='65750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='54' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='53' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone h='5250' id='32' type-v2='title' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='18250' id='10' mode='checkdropdown' name='Service level view by year' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type-v2='filter' w='16000' x='83200' y='6250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='11' mode='checkdropdown' name='Service level view by year' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type-v2='filter' w='16000' x='83200' y='24500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46375' id='5' is-fixed='true' name='Service level view by year' show-title='false' w='82400' x='800' y='6250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='28250' id='12' name='Service level view by year' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Customer Type:nk]' type-v2='color' w='16000' x='83200' y='31000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='14' mode='checkdropdown' name='Comparative study of areas with most tickets' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type-v2='filter' w='16000' x='83200' y='59250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='18250' id='15' mode='checkdropdown' name='Comparative study of areas with most tickets' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type-v2='filter' w='16000' x='83200' y='65750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46375' id='13' is-fixed='true' name='Comparative study of areas with most tickets' show-title='false' w='82400' x='800' y='52625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{923E4EAA-D96D-4679-89F1-21126E178A17}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Tickets Overview'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type-v2='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='3' name='Tickets by year' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='9' name='Incidents vs Requests' w='82400' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='8250' id='8' name='Tickets by year' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Forecast Indicator:nk]' type-v2='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8250' id='10' name='Incidents vs Requests' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Type:nk]' type-v2='color' w='16000' x='83200' y='9250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='750' minheight='750' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='54' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='53' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='49000' id='3' is-fixed='true' name='Tickets by year' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8250' id='8' name='Tickets by year' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Forecast Indicator:nk]' type-v2='color' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='9' is-fixed='true' name='Incidents vs Requests' w='82400' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8250' id='10' name='Incidents vs Requests' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Type:nk]' type-v2='color' w='16000' x='83200' y='9250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F990D530-7576-4940-B876-82FC65FDE030}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Tickets by Team and User Type'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='IT_Tickets_All_time_cleaned' name='federated.1t0khq30evm85c1ddiqqp12ylmr6' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1t0khq30evm85c1ddiqqp12ylmr6'>
+        <column datatype='datetime' name='[Created]' role='dimension' type='ordinal' />
+        <column-instance column='[Created]' derivation='Year' name='[yr:Created:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type-v2='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='10' name='Ticket status by Team' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='15' name='Ticket count by customer type' w='41200' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='22' name='Incidents vs Requests' w='41200' x='42000' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='18250' id='11' name='Ticket status by Team' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type-v2='filter' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='20750' id='12' name='Ticket status by Team' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Status:nk]' type-v2='color' w='16000' x='83200' y='19250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8250' id='23' name='Incidents vs Requests' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Type:nk]' type-v2='color' w='16000' x='83200' y='40000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1100' minheight='1100' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='29' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='28' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone h='18250' id='11' mode='checkdropdown' name='Ticket status by Team' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type-v2='filter' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='10' is-fixed='true' name='Ticket status by Team' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='20750' id='12' name='Ticket status by Team' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Status:nk]' type-v2='color' w='16000' x='83200' y='19250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='15' is-fixed='true' name='Ticket count by customer type' w='41200' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='22' is-fixed='true' name='Incidents vs Requests' w='41200' x='42000' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8250' id='23' name='Incidents vs Requests' pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Type:nk]' type-v2='color' w='16000' x='83200' y='40000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{21BD5B83-BF43-47A2-AB37-199FCE16387F}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Tickets by year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Forecast Indicator:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4158AE54-D40D-49E0-963F-AEE9AEED7FF0}' />
+    </window>
+    <window class='worksheet' name='Service level view by year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type='filter' />
+            <card mode='checkdropdown' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Customer Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{598EB3B2-D61A-42CA-B813-2CD94F60ABC1}' />
+    </window>
+    <window class='worksheet' name='Top N Services by Quarter'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='type_in' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='checkdropdown' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B5EA91DF-5E1B-4597-8AEC-CBA3E71FFE33}' />
+    </window>
+    <window class='worksheet' name='Comparative study of areas with most tickets'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Service:nk]' type='filter' />
+            <card param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6DDEC7B0-DDAF-413A-83FE-C6364C4E1C05}' />
+    </window>
+    <window class='worksheet' name='Account management Tickets - Peak Season'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Created:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C43BE26D-0E2C-4A2B-9F9F-FFD05DF04E62}' />
+    </window>
+    <window class='worksheet' name='Ticket count by location'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7C945647-D700-4818-B77F-985795C04CC4}' />
+    </window>
+    <window class='worksheet' name='Ticket status by Team'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{71FAD20C-E6B6-4DE9-972F-3C6B3484555D}' />
+    </window>
+    <window class='worksheet' name='Incidents vs Requests'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4C1B6B76-D5AD-4456-87FB-7A04D00A2D3D}' />
+    </window>
+    <window class='worksheet' name='Ticket count by customer type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[__tableau_internal_object_id__].[cnt:IT_Tickets_All_time_cleaned.csv_D08D291A3AC04A339B6C92D1C115896A:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{275D7923-79E8-4BAE-A6C2-5DB13CD77352}' />
+    </window>
+    <window class='worksheet' name='SLA Breach Trends'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{254CBC94-4E81-4C23-8782-21FA4B9EC173}' />
+    </window>
+    <window class='worksheet' name='Days to resolve by Team'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Owned By Team:nk]' type='filter' values='relevant' />
+            <card param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[none:Category:nk]' type='filter' values='relevant' />
+            <card pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='96'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BF55CEFB-397A-4199-A010-72AAA0789122}' />
+    </window>
+    <window class='worksheet' name='Days to resolve by Service'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[sum:Calculation_1708553157608325122:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E9B31792-B533-475C-9648-A4169F23BC77}' />
+    </window>
+    <window class='worksheet' name='Clustering'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[yr:Created:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1t0khq30evm85c1ddiqqp12ylmr6].[avg:Calculation_1708553157608325122:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3DFA37E0-7DF9-4C8E-ADD2-BC81EDA73E27}' />
+    </window>
+    <window class='dashboard' name='Tickets Overview'>
+      <viewpoints>
+        <viewpoint name='Incidents vs Requests'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Tickets by year'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{50F9F117-3AB4-4788-8DD6-43B2C6DF3756}' />
+    </window>
+    <window class='dashboard' name='Service Level Overview'>
+      <viewpoints>
+        <viewpoint name='Service level view by year' />
+        <viewpoint name='Top N Services by Quarter'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{E0E903F6-DD19-4898-A21D-D0EDC98C666D}' />
+    </window>
+    <window class='dashboard' name='Service dissection by subcategory'>
+      <viewpoints>
+        <viewpoint name='Comparative study of areas with most tickets'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Service level view by year' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{88EDD771-F94D-4D3D-80FC-BA696E9D5FD5}' />
+    </window>
+    <window class='dashboard' name='Tickets by Team and User Type'>
+      <viewpoints>
+        <viewpoint name='Incidents vs Requests'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Ticket count by customer type' />
+        <viewpoint name='Ticket status by Team' />
+      </viewpoints>
+      <active id='11' />
+      <simple-id uuid='{77173582-7BEA-4B6C-AABB-B5CD1F3A48F6}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 5'>
+      <viewpoints>
+        <viewpoint name='Days to resolve by Service' />
+        <viewpoint name='Days to resolve by Team' />
+        <viewpoint name='Ticket count by customer type' />
+      </viewpoints>
+      <active id='22' />
+      <simple-id uuid='{AB57577A-4EFF-472C-AC98-C42D3733E0F7}' />
+    </window>
+  </windows>
+</workbook>
